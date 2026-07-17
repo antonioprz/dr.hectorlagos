@@ -13,6 +13,10 @@ El diseño visual ya está resuelto en Stitch (Google) y se entregó como:
 
 Este documento define cómo se traduce ese export a un sitio productivo, desplegable en Hostinger (hosting compartido).
 
+## Responsive / mobile-first
+
+La mayoría de las visitas llegan desde Instagram y otras redes sociales en celular, no en desktop. El sitio se diseña mobile-first: el menú de navegación colapsa en un botón de hamburguesa con panel desplegable funcional (no decorativo), todos los botones y campos de formulario son cómodos de tocar en pantalla táctil, y el botón flotante de WhatsApp nunca debe tapar contenido ni quedar cortado por el borde de la pantalla. Cada sección se verifica tanto en desktop como en un viewport móvil (375px) antes de darse por terminada.
+
 ## Objetivo
 
 Convertir tráfico de redes sociales en:
