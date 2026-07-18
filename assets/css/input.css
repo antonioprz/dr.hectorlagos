@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .glass-card {
+    background: rgba(251, 249, 248, 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(117, 90, 41, 0.1);
+  }
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease-out;
+  }
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .scroll-progress {
+    height: 3px;
+    background: #755a29;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    z-index: 100;
+    width: 0%;
+    transition: width 0.1s linear;
+  }
+}
