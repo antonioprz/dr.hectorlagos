@@ -97,3 +97,95 @@ window.addEventListener('scroll', () => {
   const bar = document.getElementById('progress-bar');
   if (bar) bar.style.width = `${scrolled}%`;
 });
+
+// WhatsApp link wiring (floating button + all inline "Contactar por WhatsApp" links)
+(function () {
+  const WHATSAPP_NUMBER = '+573103300851';
+  document.querySelectorAll('.whatsapp-link').forEach((link) => {
+    const message = link.dataset.waMessage || 'Hola, quiero más información.';
+    link.href = window.FormUtils.buildWhatsAppUrl(WHATSAPP_NUMBER, message);
+    link.target = '_blank';
+    link.rel = 'noopener';
+  });
+})();
+
+// Hide the floating WhatsApp button while the contact section (which has its
+// own WhatsApp link) is in view, so it never sits on top of the form fields.
+(function () {
+  const floatBtn = document.getElementById('whatsapp-float');
+  const contactSection = document.getElementById('contacto');
+  if (!floatBtn || !contactSection) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        floatBtn.classList.toggle('opacity-0', entry.isIntersecting);
+        floatBtn.classList.toggle('pointer-events-none', entry.isIntersecting);
+      });
+    },
+    { threshold: 0.15 }
+  );
+  observer.observe(contactSection);
+})();
+
+// Contact form submission
+(function () {
+  const WHATSAPP_NUMBER = '+573103300851';
+  const form = document.getElementById('contact-form');
+  if (!form) return;
+
+  const statusEl = document.getElementById('form-status');
+
+  function showFieldErrors(errors) {
+    ['nombre', 'whatsapp', 'ciudad'].forEach((field) => {
+      const el = form.querySelector(`[data-error-for="${field}"]`);
+      if (!el) return;
+      if (errors[field]) {
+        el.textContent = errors[field];
+        el.classList.remove('hidden');
+      } else {
+        el.textContent = '';
+        el.classList.add('hidden');
+      }
+    });
+  }
+
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    const data = {
+      nombre: form.nombre.value,
+      whatsapp: form.whatsapp.value,
+      ciudad: form.ciudad.value,
+    };
+
+    const clientErrors = window.FormUtils.validateContactForm(data);
+    showFieldErrors(clientErrors);
+    if (Object.keys(clientErrors).length > 0) return;
+
+    statusEl.classList.remove('hidden');
+    statusEl.textContent = 'Enviando...';
+
+    try {
+      const response = await fetch('form/enviar.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+      const result = await response.json();
+
+      if (result.ok) {
+        statusEl.textContent = '¡Gracias! Te contactaremos pronto. Abriendo WhatsApp...';
+        showFieldErrors({});
+        const waUrl = window.FormUtils.buildWhatsAppUrl(WHATSAPP_NUMBER, window.FormUtils.buildLeadMessage(data));
+        window.open(waUrl, '_blank', 'noopener');
+        form.reset();
+      } else {
+        showFieldErrors(result.errors || {});
+        statusEl.textContent = (result.errors && result.errors.general) || 'Revisa los datos e intenta de nuevo.';
+      }
+    } catch (err) {
+      statusEl.textContent = 'No se pudo enviar. Intenta por WhatsApp.';
+    }
+  });
+})();

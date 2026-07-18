@@ -25,11 +25,11 @@ function buildLeadMessage({ nombre, ciudad }) {
   return `Hola, soy ${nombre}, vivo en ${ciudad}, quiero agendar mi valoración.`;
 }
 
-const api = { validateContactForm, buildWhatsAppUrl, buildLeadMessage };
+const formUtilsApi = { validateContactForm, buildWhatsAppUrl, buildLeadMessage };
 
 if (typeof module !== "undefined" && module.exports) {
-  module.exports = api;
+  module.exports = formUtilsApi;
 }
 if (typeof window !== "undefined") {
-  window.FormUtils = api;
+  window.FormUtils = formUtilsApi;
 }

@@ -201,6 +201,64 @@
     </div>
   </div>
 </section>
+<section class="py-24 bg-surface relative" id="contacto">
+  <div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-12 gap-12">
+    <div class="lg:col-span-5 space-y-6">
+      <h2 class="font-headline-lg text-primary">Hoy puede ser el día en que cambie tu historia</h2>
+      <p class="text-body-lg text-on-surface-variant">
+        No dejes pasar más tiempo. Completa tus datos y un miembro de nuestro equipo clínico se pondrá en contacto contigo para una valoración preliminar sin compromiso.
+      </p>
+      <div class="space-y-4 pt-4">
+        <div class="flex items-center gap-4">
+          <div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
+            <span class="material-symbols-outlined">location_on</span>
+          </div>
+          <span class="text-on-surface-variant">Calle 5D #38a-35, Edificio Vida, torre dos, consultorio 1013, Cali</span>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
+            <span class="material-symbols-outlined">mail</span>
+          </div>
+          <span class="text-on-surface-variant">contacto@drhectorlagos.com</span>
+        </div>
+      </div>
+    </div>
+    <div class="lg:col-span-7">
+      <form id="contact-form" class="bg-surface-container-high p-8 md:p-10 rounded-2xl shadow-lg space-y-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="space-y-2">
+            <label class="block font-label-sm text-primary" for="nombre">Nombre completo</label>
+            <input id="nombre" name="nombre" class="w-full bg-surface border border-outline-variant focus:border-secondary focus:ring-1 focus:ring-secondary rounded-lg px-4 py-3 outline-none transition-all" placeholder="Ej. Ana García" type="text">
+            <p class="text-error text-sm hidden" data-error-for="nombre"></p>
+          </div>
+          <div class="space-y-2">
+            <label class="block font-label-sm text-primary" for="whatsapp">WhatsApp</label>
+            <input id="whatsapp" name="whatsapp" class="w-full bg-surface border border-outline-variant focus:border-secondary focus:ring-1 focus:ring-secondary rounded-lg px-4 py-3 outline-none transition-all" placeholder="+57 300 000 0000" type="tel">
+            <p class="text-error text-sm hidden" data-error-for="whatsapp"></p>
+          </div>
+        </div>
+        <div class="space-y-2">
+          <label class="block font-label-sm text-primary" for="ciudad">Ciudad de residencia</label>
+          <input id="ciudad" name="ciudad" class="w-full bg-surface border border-outline-variant focus:border-secondary focus:ring-1 focus:ring-secondary rounded-lg px-4 py-3 outline-none transition-all" placeholder="Ej. Medellín" type="text">
+          <p class="text-error text-sm hidden" data-error-for="ciudad"></p>
+        </div>
+        <button class="w-full bg-primary-container text-on-primary-container py-4 rounded-full font-label-sm text-lg hover:opacity-90 transition-all shadow-md active:scale-[0.98]" type="submit">
+          Quiero comenzar mi transformación
+        </button>
+        <p class="text-center text-sm hidden" id="form-status"></p>
+        <div class="text-center pt-4 border-t border-outline-variant">
+          <p class="text-on-surface-variant text-sm mb-4">O si prefieres, escríbenos directamente:</p>
+          <a class="whatsapp-link flex items-center justify-center gap-2 text-primary font-bold hover:text-secondary transition-colors" href="#" data-wa-message="Hola, quiero comenzar mi transformación.">
+            Contactar por WhatsApp
+          </a>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+<a href="#" id="whatsapp-float" class="whatsapp-link fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center shadow-xl hover:scale-105 transition-all duration-300" data-wa-message="Hola, quiero agendar una consulta." aria-label="Contactar por WhatsApp" target="_blank" rel="noopener">
+  <span class="material-symbols-outlined text-3xl">chat</span>
+</a>
 <footer class="w-full py-12 bg-surface-container-high border-t border-outline-variant/30">
   <div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-3 gap-8">
     <div class="space-y-4">
@@ -228,6 +286,7 @@
   </div>
 </footer>
 <script src="assets/js/quiz.js"></script>
+<script src="assets/js/formUtils.js"></script>
 <script src="assets/js/script.js"></script>
 </body>
 </html>

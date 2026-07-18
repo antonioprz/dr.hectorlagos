@@ -64,11 +64,11 @@ function recordAnswer(answers, stepIndex, optionIndex) {
   return { ...answers, [question.id]: option };
 }
 
-const api = { getTotalSteps, getQuestion, isLastStep, getProgressPercent, recordAnswer, QUESTIONS };
+const quizApi = { getTotalSteps, getQuestion, isLastStep, getProgressPercent, recordAnswer, QUESTIONS };
 
 if (typeof module !== "undefined" && module.exports) {
-  module.exports = api;
+  module.exports = quizApi;
 }
 if (typeof window !== "undefined") {
-  window.Quiz = api;
+  window.Quiz = quizApi;
 }
