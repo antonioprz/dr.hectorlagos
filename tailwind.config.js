@@ -76,18 +76,18 @@ module.exports = {
         "headline-md": ["Playfair Display", "serif"]
       },
       fontSize: {
-        "headline-lg": ["32px", { lineHeight: "40px", fontWeight: "600" }],
+        "headline-lg": ["38px", { lineHeight: "46px", fontWeight: "600" }],
         "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
         "label-sm": ["14px", { lineHeight: "20px", letterSpacing: "0.05em", fontWeight: "600" }],
         "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
-        "headline-lg-mobile": ["28px", { lineHeight: "36px", fontWeight: "600" }],
+        "headline-lg-mobile": ["32px", { lineHeight: "40px", fontWeight: "600" }],
         "display-lg": ["48px", { lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "700" }],
-        "headline-md": ["24px", { lineHeight: "32px", fontWeight: "500" }]
+        "headline-md": ["27px", { lineHeight: "34px", fontWeight: "500" }]
       },
       keyframes: {
         "whatsapp-pulse": {
-          "0%": { transform: "scale(1)", opacity: "0.6" },
-          "100%": { transform: "scale(1.8)", opacity: "0" }
+          "0%": { boxShadow: "0 0 0 0 rgba(37, 211, 102, 0.55)" },
+          "100%": { boxShadow: "0 0 0 20px rgba(37, 211, 102, 0)" }
         }
       },
       animation: {

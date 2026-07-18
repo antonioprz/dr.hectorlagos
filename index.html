@@ -40,7 +40,7 @@ gtag('config', 'G-XXXXXXXXXX');
 <nav class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-sm border-b border-outline-variant/30">
   <div class="max-w-container-max mx-auto px-gutter flex justify-between items-center h-20">
     <a href="#" class="flex items-center h-12">
-      <img src="assets/img/logo.png" alt="Dr. Héctor Lagos — Cirugía Bariátrica" class="h-full w-auto object-contain">
+      <img src="assets/img/logo-v2.png" alt="Dr. Héctor Lagos — Cirugía Bariátrica" class="h-full w-auto object-contain">
     </a>
     <div class="hidden md:flex items-center gap-8">
       <a class="text-on-surface-variant hover:text-primary transition-colors" href="#beneficios">Beneficios</a>
@@ -67,7 +67,7 @@ gtag('config', 'G-XXXXXXXXXX');
     <img src="assets/img/hero-placeholder.svg" alt="Persona caminando, representando vitalidad y un nuevo comienzo" class="w-full h-full object-cover object-center">
   </div>
   <div class="relative z-20 max-w-container-max mx-auto px-gutter w-full">
-    <div class="max-w-2xl space-y-6">
+    <div class="max-w-2xl space-y-6 bg-surface/85 backdrop-blur-md rounded-3xl p-8 md:p-10 shadow-xl">
       <h1 class="font-display-lg text-primary leading-tight">
         No estás buscando bajar de peso. Estás buscando <span class="italic text-secondary">volver a vivir.</span>
       </h1>
@@ -79,7 +79,7 @@ gtag('config', 'G-XXXXXXXXXX');
           Agendar valoración
           <span class="material-symbols-outlined text-sm">calendar_today</span>
         </a>
-        <a class="whatsapp-link border-2 border-secondary text-secondary px-8 py-4 rounded-full font-label-sm hover:bg-secondary/5 transition-all flex items-center gap-2" href="#" data-wa-message="Hola, quiero agendar una consulta.">
+        <a class="whatsapp-link border-2 border-secondary text-primary px-8 py-4 rounded-full font-label-sm hover:bg-secondary/10 transition-all flex items-center gap-2" href="#" data-wa-message="Hola, quiero agendar una consulta.">
           Contactar por WhatsApp
           <span class="material-symbols-outlined text-sm">chat</span>
         </a>
@@ -219,7 +219,7 @@ gtag('config', 'G-XXXXXXXXXX');
       </div>
     </div>
     <div class="mt-12 text-center">
-      <a href="#contacto" class="inline-block border-2 border-secondary text-secondary px-8 py-4 rounded-full font-label-sm hover:bg-secondary/5 transition-all">Quiero agendar mi cita</a>
+      <a href="#contacto" class="inline-block border-2 border-secondary text-primary px-8 py-4 rounded-full font-label-sm hover:bg-secondary/10 transition-all">Quiero agendar mi cita</a>
     </div>
   </div>
 </section>
@@ -278,17 +278,14 @@ gtag('config', 'G-XXXXXXXXXX');
     </div>
   </div>
 </section>
-<a href="#" id="whatsapp-float" class="whatsapp-link fixed bottom-6 right-6 z-50 w-16 h-16" data-wa-message="Hola, quiero agendar una consulta." aria-label="Contactar por WhatsApp" target="_blank" rel="noopener">
-  <span class="absolute inset-0 rounded-full bg-[#25D366] animate-whatsapp-pulse"></span>
-  <span class="relative flex items-center justify-center w-16 h-16 rounded-full bg-[#25D366] text-white shadow-xl hover:scale-105 transition-transform duration-300">
-    <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.284l-.549 2.012 2.054-.538c.955.519 2.031.832 3.257.831 3.176 0 5.765-2.587 5.765-5.766 0-3.179-2.587-5.789-5.779-5.789zm2.353 8.034c-.159.443-.784.807-1.214.858-.405.048-1.028.016-1.722-.303-1.63-.75-2.673-2.399-2.755-2.508-.083-.109-.675-.898-.675-1.713 0-.814.427-1.214.58-1.372.153-.158.333-.198.444-.198.111 0 .222.006.32.013.102.008.235-.04.367.279.136.327.466 1.129.506 1.213.041.083.067.181.012.291-.055.109-.083.181-.165.279-.082.099-.174.22-.248.297-.083.085-.17.177-.073.344.098.167.433.716.927 1.156.639.567 1.177.744 1.345.828.167.083.267.068.366-.046.098-.115.427-.497.541-.664.114-.167.228-.14.385-.083.158.057 1.003.472 1.176.559.172.086.287.129.33.204.043.075.043.435-.116.878z"></path></svg>
-  </span>
+<a href="#" id="whatsapp-float" class="whatsapp-link fixed bottom-6 right-6 z-50 flex items-center justify-center w-16 h-16 rounded-full bg-[#25D366] text-white shadow-xl hover:scale-105 transition-transform duration-300 animate-whatsapp-pulse" data-wa-message="Hola, quiero agendar una consulta." aria-label="Contactar por WhatsApp" target="_blank" rel="noopener">
+  <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.284l-.549 2.012 2.054-.538c.955.519 2.031.832 3.257.831 3.176 0 5.765-2.587 5.765-5.766 0-3.179-2.587-5.789-5.779-5.789zm2.353 8.034c-.159.443-.784.807-1.214.858-.405.048-1.028.016-1.722-.303-1.63-.75-2.673-2.399-2.755-2.508-.083-.109-.675-.898-.675-1.713 0-.814.427-1.214.58-1.372.153-.158.333-.198.444-.198.111 0 .222.006.32.013.102.008.235-.04.367.279.136.327.466 1.129.506 1.213.041.083.067.181.012.291-.055.109-.083.181-.165.279-.082.099-.174.22-.248.297-.083.085-.17.177-.073.344.098.167.433.716.927 1.156.639.567 1.177.744 1.345.828.167.083.267.068.366-.046.098-.115.427-.497.541-.664.114-.167.228-.14.385-.083.158.057 1.003.472 1.176.559.172.086.287.129.33.204.043.075.043.435-.116.878z"></path></svg>
 </a>
 <footer class="w-full py-12 bg-surface-container-high border-t border-outline-variant/30">
   <div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-3 gap-8">
     <div class="space-y-4">
       <a href="#" class="block h-10">
-        <img src="assets/img/logo.png" alt="Dr. Héctor Lagos" class="h-full w-auto object-contain">
+        <img src="assets/img/logo-v2.png" alt="Dr. Héctor Lagos" class="h-full w-auto object-contain">
       </a>
       <p class="text-body-md text-on-surface-variant pr-8">Especialista en Cirugía Bariátrica y Metabólica. Transformando vidas a través de la excelencia médica y humana.</p>
     </div>
