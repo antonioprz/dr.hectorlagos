@@ -116,6 +116,33 @@
     </div>
   </div>
 </section>
+<section class="py-24 relative overflow-hidden bg-primary text-on-primary-container" id="test">
+  <div class="max-w-4xl mx-auto px-gutter relative z-10">
+    <div class="bg-surface p-8 md:p-12 rounded-2xl shadow-2xl">
+      <div class="flex justify-between items-center mb-8">
+        <div>
+          <h2 class="font-headline-lg text-primary mb-2">Test de Candidato</h2>
+          <p class="text-on-surface-variant font-body-md">Descubre en menos de 1 minuto si este camino es para ti.</p>
+        </div>
+        <div class="text-right">
+          <span class="text-secondary font-label-sm" id="step-indicator">PASO 1 DE 4</span>
+          <div class="w-32 h-1 bg-surface-container-highest mt-2 rounded-full overflow-hidden">
+            <div class="h-full bg-secondary transition-all duration-500" id="step-progress" style="width: 25%;"></div>
+          </div>
+        </div>
+      </div>
+      <div id="quiz-question-container"></div>
+      <div class="hidden text-center space-y-6 py-12" id="step-final">
+        <div class="w-20 h-20 bg-primary-fixed rounded-full flex items-center justify-center mx-auto text-on-primary-fixed">
+          <span class="material-symbols-outlined text-4xl">check_circle</span>
+        </div>
+        <h3 class="font-headline-lg text-primary">¡Eres un excelente candidato!</h3>
+        <p class="text-on-surface-variant max-w-md mx-auto">Basado en tus respuestas, la cirugía bariátrica podría transformar tu vida. La evaluación final la realiza el Dr. Lagos en consulta.</p>
+        <a class="inline-block bg-primary-container text-on-primary-container px-8 py-4 rounded-full font-label-sm" href="#contacto">Comenzar ahora</a>
+      </div>
+    </div>
+  </div>
+</section>
 <section class="py-24 bg-surface-container-low" id="historias">
   <div class="max-w-container-max mx-auto px-gutter">
     <div class="mb-12">
@@ -200,6 +227,7 @@
     <p class="text-body-md text-on-surface-variant text-sm">© 2026 Dr. Héctor Lagos. Especialista en Cirugía Bariátrica. Todos los derechos reservados.</p>
   </div>
 </footer>
+<script src="assets/js/quiz.js"></script>
 <script src="assets/js/script.js"></script>
 </body>
 </html>
