@@ -4,7 +4,7 @@
 
 1. `npm install`
 2. `composer install`
-3. `cp form/config.example.php form/config.php` y completar `SMTP_PASSWORD` con la contraseña real del correo `contacto@drhectorlagos.com` en Hostinger.
+3. `cp form/config.example.php form/config.php` y completar `SMTP_PASSWORD` con el App Password de Gmail de `dr.hectorlagos@gmail.com`.
 4. `npm run build:css` (o `npm run watch:css` mientras editás)
 5. `php -S localhost:8000`
 6. Abrir `http://localhost:8000/index.html`
@@ -17,7 +17,7 @@
 ## Antes de desplegar
 
 1. Reemplazar `PIXEL_ID_PLACEHOLDER` y `G-XXXXXXXXXX` en `index.html` con los IDs reales de Meta Pixel y Google Analytics 4.
-2. Confirmar que `form/config.php` tiene la contraseña SMTP real (no se sube al repo, solo al servidor).
+2. Confirmar que `form/config.php` tiene el App Password de Gmail real (no se sube al repo, solo al servidor).
 3. Ejecutar `npm run build:css` para regenerar `assets/css/output.css` con los últimos cambios.
 4. Ejecutar `composer install` para regenerar `vendor/`.
 
@@ -26,6 +26,7 @@
 Subir estos archivos y carpetas a `public_html` vía el Administrador de Archivos de hPanel (o FTP):
 
 - `index.html`
+- `aviso-privacidad.html`
 - `assets/` (incluyendo `css/output.css` ya compilado)
 - `form/` (incluyendo `enviar.php`, `validate.php` y `config.php` con credenciales reales — **no** subir `form/tests/`)
 - `vendor/`
