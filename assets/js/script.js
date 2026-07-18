@@ -177,6 +177,8 @@ window.addEventListener('scroll', () => {
       if (result.ok) {
         statusEl.textContent = '¡Gracias! Te contactaremos pronto. Abriendo WhatsApp...';
         showFieldErrors({});
+        if (window.fbq) fbq('track', 'Lead');
+        if (window.gtag) gtag('event', 'generate_lead');
         const waUrl = window.FormUtils.buildWhatsAppUrl(WHATSAPP_NUMBER, window.FormUtils.buildLeadMessage(data));
         window.open(waUrl, '_blank', 'noopener');
         form.reset();
@@ -189,3 +191,16 @@ window.addEventListener('scroll', () => {
     }
   });
 })();
+
+// Tracking events
+document.addEventListener('quiz:completed', () => {
+  if (window.fbq) fbq('trackCustom', 'TestCompletado');
+  if (window.gtag) gtag('event', 'test_completado');
+});
+
+document.querySelectorAll('.whatsapp-link').forEach((link) => {
+  link.addEventListener('click', () => {
+    if (window.fbq) fbq('track', 'Contact');
+    if (window.gtag) gtag('event', 'whatsapp_click');
+  });
+});
