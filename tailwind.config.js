@@ -83,6 +83,15 @@ module.exports = {
         "headline-lg-mobile": ["28px", { lineHeight: "36px", fontWeight: "600" }],
         "display-lg": ["48px", { lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "700" }],
         "headline-md": ["24px", { lineHeight: "32px", fontWeight: "500" }]
+      },
+      keyframes: {
+        "whatsapp-pulse": {
+          "0%": { transform: "scale(1)", opacity: "0.6" },
+          "100%": { transform: "scale(1.8)", opacity: "0" }
+        }
+      },
+      animation: {
+        "whatsapp-pulse": "whatsapp-pulse 1.8s ease-out infinite"
       }
     }
   },
