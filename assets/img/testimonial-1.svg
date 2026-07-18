@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">
+  <rect width="800" height="1000" fill="#eae8e7"/>
+  <rect x="0" y="0" width="800" height="1000" fill="none" stroke="#755a29" stroke-width="2"/>
+  <text x="400" y="500" text-anchor="middle" font-family="Work Sans, sans-serif" font-size="28" fill="#061b0e">
+    Historia de paciente 1
+  </text>
+</svg>
